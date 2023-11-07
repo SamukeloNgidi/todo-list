@@ -1,0 +1,26 @@
+<div class="todos">
+	<form (submit)="addItem()">
+		<input 
+			type="text"
+			name="inputItem"
+			placeholder="Enter item..."
+			class="item-input"
+			[(ngModel)]="inputTodo"
+		/>
+		<input type="submit" value="Add To List" class="todo-submit"/>
+	</form>
+	<div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.done ? 'done' : '') }}">
+		<div class="id">{{ i }}</div>
+		<div class="item" (click)="toggleDone(i)">{{ todo.item }}</div>
+		<button class="remove" (click)="removeItem(i)">Remove</button>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>Instructions:<br>
+    - Enter item and add to list.<br>
+    - Click on item to mark as done.<br>
+    - Click remove to remove item from list.
+</div>

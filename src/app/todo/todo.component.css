@@ -1,0 +1,66 @@
+.todo {
+	display: flex;
+	padding: 10px 15px;
+	background-color: #FFF;
+	border-bottom: 1px solid #DDD;
+}
+
+.todo:nth-child(even) {
+	background-color: #eeeeee;
+} 
+
+.todo:last-of-type {
+	border-bottom: 0;
+}
+
+.todo .id {
+	flex: 1 1 50px;
+}
+
+.todo .item {
+	flex: 1 1 100%;
+}
+
+.todo.done .item {
+	text-decoration: line-through;
+}
+
+.todo .remove{
+	display:inline-block;
+	padding: 0px 15px;
+	border: none;
+	background-color: #0c881d9d;
+	border-radius: 4px;
+	color: #FFF;
+}
+
+.item-input {
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	appearance: none;
+	border: none;
+	background-color: #F3F3F3;
+	margin-top: 15px;
+	font-size: 20px;
+	outline: none;
+}
+
+ .todo-submit {
+	display:block;
+	width: 100%;
+	max-width: 200px;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #0c881d9d;
+	color: #FFF;
+	margin: 15px auto;
+	border-radius: 4px;
+
+	padding: 10px 15px;
+	font-size: 18px;
+	font-weight: 700;
+}
